@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PRODUCT</title>
+  <link rel="icon" href="asset/favicon.ico" type="image/x icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    * {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f4f0ec;
+  color: #222;
+}
+/* Header and Nav */
+header {
+  background-color: rgb(55, 190, 243);
+  color: black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+header img {
+  margin-left: 70px;
+  height: 100px;
+  width: 100px;
+}
+.menu-toggle {
+  display: none;
+  background: rgb(55, 190, 243);
+  border: none;
+  color: black;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+}
+#main-nav {
+  text-align: right;
+}
+#main-nav a {
+  color: black;
+  text-decoration: none;
+  margin-left: 5px;
+  padding: 6px 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.3s;
+}
+#main-nav a.active, #main-nav a:hover {
+  background: red;
+  color: white;
+}
+/* Responsive Nav */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 100;
+  }
+  #main-nav {
+    display: none;
+    flex-direction: column;
+    background: rgb(55, 190, 243);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+  }
+  #main-nav.show {
+    display: flex;
+  }
+  #main-nav a {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+    width: 100%;
+    display: block;
+  }
+  header {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  header img {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+  }
+}
+h1{
+  text-align: center;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px;
+  box-sizing: border-box;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-card {
+  background:lightblue;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+}
+
+.product-card img {
+  width: 200PX;
+  height: 200PX;
+  border-radius: 4px;
+}
+
+.product-card h3 {
+  font-size: 1em;
+  margin: 10px 0 5px;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #444;
+}
+footer {
+  background-color: rgb(55, 190, 243);
+  color:black;
+  padding: 40px 0;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex-basis: 25%;
+  margin: 20px;
+}
+
+.footer-section h3 {
+  margin-top: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+.footer-section a {
+  color:black;
+  text-decoration: none;
+}
+
+
+.social-media {
+  display: flex;
+}
+
+.social-media {
+  display: flex;
+  font-size: 25px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+
+.copyright {
+  text-align: center;
+  padding: 20px 0;
+}
+body{
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 900px){
+.product-grid{
+  flex: 1 1 48%;
+  width:100%;
+  display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap:30px;
+}
+.product-card{
+  padding: 20px;
+}
+}
+@media (max-width: 500px){
+.product-grid{
+  width:100%;
+  display: inline;
+  gap:60px;
+
+}
+.product-card{
+  padding: 20px;
+  gap:60px;
+}
+}
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .footer-section {
+    flex-basis: 100%;
+    margin: 10px 0;
+  }
+  .social-media {
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 20px;
+    padding: 10px 0;
+  }
+}
+.sticky{
+  position: sticky;
+  top:0;
+  z-index: 9999;
+}
+    </style>
+</head>
+<body>
+<header class="sticky">
+       <img src="asset/logo.png" alt="logo" style="height: 100px; width: 100px;vertical-align: midle;margin-right: 0px; margin-left: 70px;">
+           <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
+        <nav id="main-nav">
+               <a href="index.html">HOME</a>
+                <a href="product.html" class="active">PRODUCT</a>
+                <a href="about us.html">ABOUT US</a>
+                <a href="contact.html">CONTACT US</a>
+            </nav>
+                 
+    </header>
+    <h1>MAKE A CHOICE </h1>
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuRBqIwYadqYjjXr4_gzOCHsOfpzm_KYEmsg&s" alt="iphone 16">
+      <h3>iphone 16</h3>
+      <p class="price">540,000FCFA</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRxxjvBwNdCxILsDh3fCyIQepJI7gpLWR7MQ&s" alt="iphone 16PM">
+      <h3>iphone 16PM</h3>
+      <p class="price">600,000FCFA</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo73UjXK1pqS3kZ-XUgcY0MnDLSYeAbvtjig&s" alt="iphone 15PM">
+      <h3>iphone 15PM</h3>
+      <p class="price">560,000FCFA</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://shop.switch.com.my/cdn/shop/files/iPhone_15_Pink_PDP_Image_Position-1__GBEN_7cf60425-0d5a-4bc9-bfd9-645b9c86e68e.jpg?v=1717694179&width=1920" alt="iphone 15+">
+      <h3>iphone 15+</h3>
+      <p class="price">540,000FCFA</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxzt8Pm0MGL883-CLgOUBJWnRClvyrll5XsQ&s?v=1717694179&width=1920" alt="iphone 15">
+      <h3>iphone 15</h3>
+      <p class="price">470,000FCFA</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Space-Black-1138.jpg?v=1717694179&width=1920" alt="iphone 14PM">
+      <h3>iphone 14PM</h3>
+      <p class="price">510,000FCFA</p>
+    </div>
+
+   <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWa46x2J9AUV9yvqfZZOhdRYyScfKn2FvEOg&s" alt="samsung z fold 7">
+      <h3>samsung z fold 7</h3>
+      <p class="price">500,000FCFA</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDs5E_uMnsmB9qa8rDPzqIU3UaYd3Ze0If7Q&s" alt="samsung S25ultra">
+      <h3>samsung S25ultra</h3>
+      <p class="price">810,000FCFA</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://www.ubuy.cm/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNzFab0RUN2Eyd0wuX0FDX1NMMTUwMF8uanBn.jpg" alt="samsung S24ultra">
+      <h3>samsung S24ultra</h3>
+      <p class="price">510,000FCFA</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgI965kaFlFyMpHB2Dn27jKzNgRJhiJbKRKg&s" alt="samsung S23ultra">
+      <h3>samsung S23ultra</h3>
+      <p class="price">350,000FCFA</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDa5skiLle_zgr3bnOWUahu-XwAnPYsEwrkg&s" alt="samsung S2o">
+      <h3>samsung S20 </h3>
+      <p class="price">150,000FCFA</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNYyAssW2quAKh-5G5Tk_frmpk-GBaVDD__g&s" alt="samsung S22">
+      <h3>samsung S22</h3>
+      <p class="price">230,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL1LfRIhfVFsW73oYqlGE5_DvaaHmsWUJCiQ&s" alt="hp intercore ultra 7">
+      <h3>hp intercore ultra 7</h3>
+      <p class="price">610,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeyAwdayvU_j__vUiol_2z5i0h2O3VjPEqzQ&s" alt="hp elitebook840">
+      <h3>hp elitebook840</h3>
+      <p class="price">210,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVPnxvuArIeBlINI1QNBVe4XIZRfPynEivbQ&s" alt="DELL XPS 15">
+      <h3>DELL XPS 15</h3>
+      <p class="price">200,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUf4pULs6Png1WHda_lSMKt2-PA5Xb866cyw&s" alt="samsung smart tv 43 inch">
+      <h3>samsung smart tv 43 inch</h3>
+      <p class="price">70,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNTpCpOA2XW5vPO8dbI3V-LBShAx4HdEpD2A&s" alt="samsung smart tv 65 inch">
+      <h3>samsung smart tv 65 inch</h3>
+      <p class="price">150,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbcssPunShigbTpgWPGF9xK8IYBb2v4Ek_Iw&s" alt="samsung smart tv 75 inch">
+      <h3>samsung smart tv 75 inch</h3>
+      <p class="price">510,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFgigwjyyVdSTFgNI9NsbVaohuFU_UrXO2Ig&s" alt="airpods-pro">
+      <h3> airpods-pro</h3>
+      <p class="price">50,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwsCrwQLnhazzFMdywmRpcGAJVyKQf7BF3hQ&s" alt="oraimo freepod ">
+      <h3>oraimo freepod</h3>
+      <p class="price">30,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnTt6aNjZurT0FzhSaeM5UMdsW_93sYjUN9Q&s" alt="Galaxy Buds 3 pro">
+      <h3>Galaxy Buds 3 pro</h3>
+      <p class="price">45,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Space-Black-1138.jpg?v=1717694179&width=1920" alt="iphone 14PM">
+      <h3>iphone 14PM</h3>
+      <p class="price">510,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Space-Black-1138.jpg?v=1717694179&width=1920" alt="iphone 14PM">
+      <h3>iphone 14PM</h3>
+      <p class="price">510,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Space-Black-1138.jpg?v=1717694179&width=1920" alt="iphone 14PM">
+      <h3>iphone 14PM</h3>
+      <p class="price">510,000FCFA</p>
+    </div>
+    <div class="product-card">
+      <img src="https://adminapi.applegadgetsbd.com/storage/media/large/iPhone-14-Pro-Space-Black-1138.jpg?v=1717694179&width=1920" alt="iphone 14PM">
+      <h3>iphone 14PM</h3>
+      <p class="price">510,000FCFA</p>
+    </div>
+    </div>
+    <footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>MAIN LINKS</h3>
+      <ul>
+        <li><a href="index.html">HOME</a></li> 
+        <li><a href="product.html" class="active">PRODUCT</a></li>             
+        <li><a href="about us.html">ABOUT US</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>                    
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>
+        <i class="fa-solid fa-location-dot"></i>BESSENGUE,DOUALA
+        </p>
+        <p>
+       <i class="fa-solid fa-phone-volume"></i>656,183,965
+       </p>
+        <p><i class="fa-solid fa-envelope"></i>
+        <a href="mailto: cotech@gmail.com">cotech@gmail.com</a>
+        </p>
+
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-098ae30b-de40-4926-9950-56308154ff43" data-elfsight-app-lazy></div>
+      </p>
+    </div>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <ul class="social-media">
+        <a href="https://twetter.com/BONG PATRICK">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a> 
+        <a href="https://instgram.com/bongpatrick17">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/Bong patrick">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    <p> COPYRIGHT &copy; 2025  COTECH ELECTRONICS, ALL RIGHTS RESEVED .</p>
+  </div>
+</footer>
+<!-- Responsive Menu Toggle Script -->
+    <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.getElementById('main-nav').classList.toggle('show');
+    });
+    </script>
+</body>
+</html>

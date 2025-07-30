@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>CONTACT US</title>
+    <link rel="icon" href="asset/favicon.ico" type="image/x icon">
+    <!--this link is responsible for displaying all the icons-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <style>
+     * {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f4f0ec;
+  color: #222;
+}
+/* Header and Nav */
+header {
+  background-color: rgb(55, 190, 243);
+  color: black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+header img {
+  margin-left: 70px;
+  height: 100px;
+  width: 100px;
+}
+.menu-toggle {
+  display: none;
+  background: rgb(55, 190, 243);
+  border: none;
+  color: black;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+}
+#main-nav {
+  text-align: right;
+}
+#main-nav a {
+  color: black;
+  text-decoration: none;
+  margin-left: 5px;
+  padding: 6px 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.3s;
+}
+#main-nav a.active, #main-nav a:hover {
+  background: red;
+  color: white;
+}
+/* Responsive Nav */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 100;
+  }
+  #main-nav {
+    display: none;
+    flex-direction: column;
+    background: rgb(55, 190, 243);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+  }
+  #main-nav.show {
+    display: flex;
+  }
+  #main-nav a {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+    width: 100%;
+    display: block;
+  }
+  header {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  header img {
+    margin-left: 0;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+  }
+}
+.contact-container{
+    display:flex;
+    flex-wrap:wrap;
+    max-width: 1000px;
+    margin: 40px auto;
+    background:whitesmoke;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    
+     
+.contact-info{
+    flex:1;
+    min-width:300px;
+    padding:20px;
+}
+.contact-info h2{
+    font-size:32px;
+    margin:0 0 10px;
+}
+.contact-info h3 {
+  margin-top: 20px;
+}
+
+.contact-info a {
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background: #222;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-form button:hover {
+  background: #444;
+}
+footer {
+  background-color: rgb(55, 190, 243);
+  color:black;
+  padding: 20px 0;
+  margin: 20px o;
+  font-style: normal;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex-basis: 25%;
+  margin: 20px;
+}
+
+.footer-section h3 {
+  margin-top: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+.footer-section a {
+  color:black;
+  text-decoration: none;
+}
+
+
+.social-media {
+  display: flex;
+}
+
+.social-media {
+  display: flex;
+  font-size: 25px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.copyright {
+  text-align: center;
+  padding: 20px 0;
+}
+
+ 
+ @media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    font-size: 20px;
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .footer-section {
+    flex-basis: 100%;
+    margin: 10px 0;
+  }
+  .social-media {
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 20px;
+    padding: 10px 0;
+  }
+}
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .footer-section {
+    flex-basis: 100%;
+    margin: 10px 0;
+  }
+  .social-media {
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 20px;
+    padding: 10px 0;
+  }
+}
+.sticky{
+  position: sticky;
+  top:0;
+}
+     </style>
+</head>
+<body>
+    <header class="sticky">
+             <img src="asset/logo.png" alt="logo" style="height: 100px; width: 100px;vertical-align: middle;margin-right: 0px;margin-left: 70px;">
+                <button class="menu-toggle" aria-label="Open Menu">&#9776;</button>
+        <nav id="main-nav">
+                     <a href="index.html">HOME</a>
+                     <a href="product.html">PRODUCT</a>
+                     <a href="about us.html">ABOUT US</a>
+                     <a href="contact.html"class="active">CONTACT US</a>
+                </nav>                
+    </header> 
+    <div class="contact-container">
+        <div class="contact-information">
+            <h2>Hello Darling!</h2>
+            <p>Give us a call or send a note. We will be happy to<br> answer your question and clarify you.</p>
+             <h3>Contact Us</h3>
+            <p><i class="fa-solid fa-envelope"></i>
+        <a href="mailto: cotech@gmail.com"> cotech@gmail.com</a>
+        </p>
+        <p>
+       <i class="fa-solid fa-phone-volume"></i> 656,183,965
+       <h3>location</h3>
+       <p>
+        <i class="fa-solid fa-location-dot"></i> Bessengue, Douala
+        </p>
+        <P>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d31838.6422204324!2d9.70057735494542!3d4.055009811013887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbessengue%20Douala%202%C3%A8me!5e0!3m2!1sen!2scm!4v1752748164619!5m2!1sen!2scm" width="100%"height=500vh></iframe>"</iframe>
+        </div>
+        <div class="contact-form">
+         <h3>Send a Note</h3>
+         <form>
+            <lebel for="name">full name</lebel>
+            <input type="text" id="name" name="name">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+            <lebel for="question">Question*</lebel>
+            <textarea id="question" name="question" rows="5"required></textarea>
+            <button type="submit">Send</button>
+         </form>
+        </div>
+    </div> 
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section">
+           <h3>MAIN LINKS</h3>
+           <ul>
+         <li><a href="index.html">HOME</a></li> 
+         <li><a href="product.html">PRODUCT</a></li>            
+        <li><a href="about us.html">ABOUT US</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>                    
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>
+        <i class="fa-solid fa-location-dot"></i>BESSENGUE, DOUALA
+        </p>
+        <p>
+       <i class="fa-solid fa-phone-volume"></i>:656,183,965
+       </p>
+        <p><i class="fa-solid fa-envelope"></i>
+        <a href="mailto: cotech@gmail.com">:cotech@gmail.com</a>
+          </p>
+          <P>
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-098ae30b-de40-4926-9950-56308154ff43" data-elfsight-app-lazy></div>
+      </p>
+    </div>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <ul class="social-media">
+        <a href="https://twetter.com/BONG PATRICK">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a> 
+        <a href="https://instgram.com/bongpatrick17">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/Bong patrick">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    <p> COPYRIGHT &copy; 2025  COTECH ELECTRONICS, ALL RIGHTS RESEVED .</p>
+  </div>
+</footer>
+ <!-- Responsive Menu Toggle Script -->
+    <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.getElementById('main-nav').classList.toggle('show');
+    });
+    </script> 
+</body>
+</html>
